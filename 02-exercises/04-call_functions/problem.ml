@@ -18,7 +18,11 @@ let () =
 
 (* Try to write [average] by reusing [add] and [half], first ordering your
    function invocations using parentheses, then using let bindings. *)
-let average x y = failwith "For you to implement"
+let average x y =
+  let avg = half (add x y) in
+  avg;;
+
+
 
 let%test "Testing average..."  =
   Int.(=) 5 (average 5 5)
